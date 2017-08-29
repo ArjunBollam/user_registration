@@ -1,0 +1,6 @@
+user_registration.redirection:
+  path: '/form/questionnaire-page'
+  defaults:
+    _title: 'Phone Authentication'
+  requirements:
+    _permission: 'access content'

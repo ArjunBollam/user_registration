@@ -1,0 +1,14 @@
+<?php
+
+use Drupal\Core\Url;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
+/**
+ * Implements hook_user_login().
+ */
+function user_redirection_user_login($account) {
+	//this is user's first time log-in.
+	if($account->get('access')->value == 0){
+		return new RedirectResponse(Url::fromUri('form/questionnaire-page'));
+	}
+}
